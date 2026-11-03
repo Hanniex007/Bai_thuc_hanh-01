@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main() {
+    int a, b;
+    printf("Nhap hai so nguyen duong a va b: ");
+    scanf("%d %d", &a, &b);
+    int a_goc = a, b_goc = b;
+    while (b != 0) {
+        int temp = b;
+        b = a % b;
+        a = temp;
+    }
+    int ucln = a;
+    int bcnn = (a_goc * b_goc) / ucln;
+    printf("Boi chung nho nhat cua %d va %d la: %d\n", a_goc, b_goc, bcnn);
+    return 0;
+}
